@@ -1,3 +1,4 @@
+import 'package:ddd_drive_flutter/domain/todo_item.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'todo_list_state.freezed.dart';
