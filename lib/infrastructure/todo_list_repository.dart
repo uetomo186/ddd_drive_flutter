@@ -3,7 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ddd_drive_flutter/domain/todo_item.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-final todoListRepository = Provider((ref) => TodoListRepository());
+final todoListesRepository = Provider((ref) => TodoListRepository());
 
 class TodoListRepository {
   final _db = FirebaseFirestore.instance;
