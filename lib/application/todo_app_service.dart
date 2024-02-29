@@ -27,4 +27,24 @@ class TodoAppService {
   Future<TodoItem> findByTodoId({required TodoId todoId}) async {
     return await _todoListRepository.findById(id: todoId.value ?? '');
   }
+
+  Future<void> updateIsDone({required TodoId todoId}) async {
+    final item = await _todoListRepository.findById(id: todoId.value ?? '');
+    await _todoListRepository.update(
+      item: item.updateIsDone(),
+    );
+  }
+
+  Future<void> updateTodoItem({required TodoItem item}) async {
+    await _todoListRepository.update(item: item);
+  }
+
+  Future<void> deleteTodoItem({required TodoId todoId}) async {
+    final item = await _todoListRepository.findById(id: todoId.value ?? '');
+    _todoListRepository.delete(item: item);
+  }
+
+  Future<void> createTodoItem() async {
+    await _todoListRepository.create(item: TodoItem.initial());
+  }
 }
