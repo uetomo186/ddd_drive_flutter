@@ -47,11 +47,12 @@ class TodoDetailPage extends HookConsumerWidget {
             ),
             const SizedBox(height: 16),
             ElevatedButton(
-                onPressed: () async {
-                  await notifier.onTapElevatedButton();
-                  Navigator.pop(context);
-                },
-                child: Text(notifier.isNew() ? '作成' : '更新'))
+              onPressed: () async {
+                await notifier.onTapElevatedButton();
+                Navigator.pop(context);
+              },
+              child: Text(notifier.isNew() ? '作成' : '更新'),
+            )
           ],
         ),
       ),
