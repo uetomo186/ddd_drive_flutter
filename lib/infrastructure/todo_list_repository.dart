@@ -12,7 +12,7 @@ class TodoListRepository {
 
   Future<void> disposeStream() async {
     if (_streamListener != null) {
-      await _streamListener!.cancel();
+      await _streamListener?.cancel();
     }
     _stream = null;
   }

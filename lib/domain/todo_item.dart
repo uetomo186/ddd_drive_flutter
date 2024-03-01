@@ -1,4 +1,4 @@
-import 'package:ddd_drive_flutter/application/common/data_time_converter.dart';
+import 'package:ddd_drive_flutter/common/data_time_converter.dart';
 import 'package:ddd_drive_flutter/domain/value/detail.dart';
 import 'package:ddd_drive_flutter/domain/value/title.dart';
 import 'package:ddd_drive_flutter/domain/value/todo_id.dart';
@@ -25,8 +25,8 @@ class TodoItem with _$TodoItem {
 
   factory TodoItem.initial() => TodoItem(
         id: const TodoId(null),
-        title: const Title(''),
-        detail: const Detail(''),
+        title: const Title(""),
+        detail: const Detail(""),
         createdAt: DateTime.now(),
       );
 

@@ -25,13 +25,13 @@ class TodoListNotifier extends StateNotifier<TodoListState> {
   }
 
   void _dispose() {
-    state = state.copyWith(isFetching: false, todolist: []);
+    state = state.copyWith(isFetching: false, todoList: []);
   }
 
   void _onFetched(List<TodoItem> todolist) {
     state = state.copyWith(
         isFetching: false,
-        todolist: todolist
+        todoList: todolist
             .map(
               (item) => TodoItem(
                   id: item.id,

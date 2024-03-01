@@ -30,9 +30,7 @@ class TodoAppService {
 
   Future<void> updateIsDone({required TodoId todoId}) async {
     final item = await _todoListRepository.findById(id: todoId.value ?? '');
-    await _todoListRepository.update(
-      item: item.updateIsDone(),
-    );
+    await _todoListRepository.update(item: item.updateIsDone());
   }
 
   Future<void> updateTodoItem({required TodoItem item}) async {
