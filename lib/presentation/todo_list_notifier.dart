@@ -1,5 +1,6 @@
+import 'package:ddd_drive_flutter/application/state/todo_list_state.dart';
 import 'package:ddd_drive_flutter/application/todo_app_service.dart';
-import 'package:ddd_drive_flutter/application/todo_list_state.dart';
+
 import 'package:ddd_drive_flutter/domain/todo_item.dart';
 import 'package:ddd_drive_flutter/presentation/todo_detail_notifier.dart';
 import 'package:ddd_drive_flutter/presentation/todo_detail_page.dart';

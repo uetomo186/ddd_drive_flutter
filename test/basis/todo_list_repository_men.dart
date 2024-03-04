@@ -1,6 +1,4 @@
-import 'dart:ffi';
 import 'dart:math';
-
 import 'package:ddd_drive_flutter/domain/todo_item.dart';
 import 'package:ddd_drive_flutter/domain/value/todo_id.dart';
 import 'package:ddd_drive_flutter/infrastructure/todo_list_repository.dart';
@@ -28,7 +26,7 @@ class TodoListRepositoryMem implements TodoListRepository {
   Future<void> disposeStream() async {}
 
   @override
-  void subscrideStream(
+  void subscribeStream(
     void Function(List<TodoItem>) onCompleted, {
     required void Function() onEmpty,
   }) {}
@@ -62,7 +60,7 @@ class TodoListRepositoryMem implements TodoListRepository {
   }
 
   @override
-  Future<void> delete({required TodoId item}) async {
-    _data.remove(item.id.value);
+  Future<void> delete({required TodoItem item}) async {
+    _data.remove(item.id.value!);
   }
 }
