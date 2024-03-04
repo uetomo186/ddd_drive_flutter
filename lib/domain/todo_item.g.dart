@@ -13,7 +13,7 @@ _$TodoItemImpl _$$TodoItemImplFromJson(Map<String, dynamic> json) =>
       detail: const DetailConverter().fromJson(json['detail'] as String),
       isDone: json['isDone'] as bool? ?? false,
       createdAt:
-          const DataTimeConverter().fromJson(json['createdAt'] as String),
+          const DateTimeConverter().fromJson(json['createdAt'] as String),
     );
 
 Map<String, dynamic> _$$TodoItemImplToJson(_$TodoItemImpl instance) =>
@@ -22,5 +22,5 @@ Map<String, dynamic> _$$TodoItemImplToJson(_$TodoItemImpl instance) =>
       'title': const TitleConverter().toJson(instance.title),
       'detail': const DetailConverter().toJson(instance.detail),
       'isDone': instance.isDone,
-      'createdAt': const DataTimeConverter().toJson(instance.createdAt),
+      'createdAt': const DateTimeConverter().toJson(instance.createdAt),
     };

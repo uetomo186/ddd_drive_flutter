@@ -27,7 +27,7 @@ mixin _$TodoItem {
   @DetailConverter()
   Detail get detail => throw _privateConstructorUsedError;
   bool get isDone => throw _privateConstructorUsedError;
-  @DataTimeConverter()
+  @DateTimeConverter()
   DateTime get createdAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -46,7 +46,7 @@ abstract class $TodoItemCopyWith<$Res> {
       @TitleConverter() Title title,
       @DetailConverter() Detail detail,
       bool isDone,
-      @DataTimeConverter() DateTime createdAt});
+      @DateTimeConverter() DateTime createdAt});
 
   $TodoIdCopyWith<$Res> get id;
   $TitleCopyWith<$Res> get title;
@@ -134,7 +134,7 @@ abstract class _$$TodoItemImplCopyWith<$Res>
       @TitleConverter() Title title,
       @DetailConverter() Detail detail,
       bool isDone,
-      @DataTimeConverter() DateTime createdAt});
+      @DateTimeConverter() DateTime createdAt});
 
   @override
   $TodoIdCopyWith<$Res> get id;
@@ -194,7 +194,7 @@ class _$TodoItemImpl extends _TodoItem {
       @TitleConverter() required this.title,
       @DetailConverter() required this.detail,
       this.isDone = false,
-      @DataTimeConverter() required this.createdAt})
+      @DateTimeConverter() required this.createdAt})
       : super._();
 
   factory _$TodoItemImpl.fromJson(Map<String, dynamic> json) =>
@@ -213,7 +213,7 @@ class _$TodoItemImpl extends _TodoItem {
   @JsonKey()
   final bool isDone;
   @override
-  @DataTimeConverter()
+  @DateTimeConverter()
   final DateTime createdAt;
 
   @override
@@ -259,7 +259,7 @@ abstract class _TodoItem extends TodoItem {
       @TitleConverter() required final Title title,
       @DetailConverter() required final Detail detail,
       final bool isDone,
-      @DataTimeConverter() required final DateTime createdAt}) = _$TodoItemImpl;
+      @DateTimeConverter() required final DateTime createdAt}) = _$TodoItemImpl;
   _TodoItem._() : super._();
 
   factory _TodoItem.fromJson(Map<String, dynamic> json) =
@@ -277,7 +277,7 @@ abstract class _TodoItem extends TodoItem {
   @override
   bool get isDone;
   @override
-  @DataTimeConverter()
+  @DateTimeConverter()
   DateTime get createdAt;
   @override
   @JsonKey(ignore: true)
