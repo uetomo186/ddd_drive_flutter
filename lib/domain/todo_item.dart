@@ -17,7 +17,7 @@ class TodoItem with _$TodoItem {
     @TitleConverter() required Title title,
     @DetailConverter() required Detail detail,
     @Default(false) bool isDone,
-    @DataTimeConverter() required DateTime createdAt,
+    @DateTimeConverter() required DateTime createdAt,
   }) = _TodoItem;
 
   factory TodoItem.fromJson(Map<String, dynamic> json) =>
